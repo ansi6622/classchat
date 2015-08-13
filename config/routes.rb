@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+
+  root 'messages#index'
+  get '/messages' => 'messages#index'
+  post '/messages' => 'messages#create'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
