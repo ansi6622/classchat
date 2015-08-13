@@ -1,10 +1,8 @@
 class MessagesController < ApplicationController
-  def index
-     render json: Message.all
-  end
 
-  def new
-    Message.new
+
+  def index
+   render json: Message.all
   end
 
   def create
