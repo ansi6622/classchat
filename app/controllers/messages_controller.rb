@@ -6,8 +6,12 @@ class MessagesController < ApplicationController
   end
 
   def create
-    Message.create(message_params)
-    render json: {message: "message succesfully added!"}
+    begin
+      Message.create(message_params)
+      render json: {message: "message succesfully added!"}
+    rescue
+      render json: {error: 'Invalid data'}
+    end
   end
 
 
